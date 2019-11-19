@@ -5,6 +5,10 @@ import (
 	ma "github.com/multiformats/go-multiaddr"
 )
 
+type PeerId mh.Multihash
+
+type PeerBook map[string]*Peer
+
 type Peer struct {
 	Id mh.Multihash
 	Addresses []*ma.Multiaddr
