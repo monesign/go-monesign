@@ -18,10 +18,17 @@ type Link struct {
 
 type EncodedNode []byte
 
-func (n *Node) Size() uint64 {
-	 s uint64 = len(n.Encode())
-	for _, l = range(n.Links) {
-		s += l.Size
-	}
-//	no return ?
+// to calculate the size of links in a node
+func (n *Node) Size() (uint64, error) {
+	 d, err := n.Marshal()
+	 if err != nil {
+	 	return 0, err
+	 }
+	 s := uint64(len(d))
+	 for _, l := range(n.Links){
+	 	s += l.Size
+	 }
+	return s, nil
 }
+
+// protoc -I=. -I=$GOPATH/src -I=$GOPATH/src/github.com/gogo/protobuf/protobuf --{binary}_out=. node.proto
