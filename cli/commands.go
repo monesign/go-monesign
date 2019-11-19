@@ -5,6 +5,7 @@ import (
 	"github.com/gonuts/flag"
 	"strings"
 	"time"
+	u "github.com/monesign/go-monesign/util"
 )
 
 var CmdMonesign = &commander.Command{
@@ -33,7 +34,7 @@ Use "monesign help <command>" for more information about a command.
 `,
 	Run: monesignCmd,
 	Subcommands: []*commander.Command{
-		// cmdMonesignVersion,
+		cmdMonesignVersion,
 		// cmdMonesignConfig,
 		cmdMonesignCommands,
 	},
