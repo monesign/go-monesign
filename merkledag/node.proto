@@ -16,7 +16,7 @@ option (gogoproto.unmarshaler_all) = true;
 
 message PBNode {
 
-    repeated Link Links = 2;
+    repeated PBLink Links = 2;
 
     optional bytes Data = 1;
 }
