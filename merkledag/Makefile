@@ -1,5 +1,8 @@
 
-all: node.pb.go
+regenerate:
+	(protoc -I=. -I=$(GOPATH)/src/github.com/gogo/protobuf/protobuf -I=$(GOPATH)/src --gogo_out=. node.proto)
 
-node.pb.go: node.proto
-    protoc --gogo_out=. --proto_path=../../../../:/usr/local/Cellar/protobuf/3.10.0/include:. $<
+#all: node.pb.go
+
+#node.pb.go: node.proto
+#    protoc --gogo_out=. --proto_path=../../../../:/usr/local/Cellar/protobuf/3.10.0/include:. $<

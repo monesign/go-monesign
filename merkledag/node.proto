@@ -3,6 +3,7 @@ package merkledag ;
 //import "code.google.com/p/gogoprotobuf/gogoproto/gogo.proto";
 import "github.com/gogo/protobuf/gogoproto/gogo.proto" ;
 //import "github.com/gogo/protobuf/proto" ;
+//import "google/protobuf/gogo.proto" ;
 //import "/Users/henrysyahputra/go/src/github.com/gogo/protobuf/gogoproto";
 
 option (gogoproto.gostring_all) = true;
