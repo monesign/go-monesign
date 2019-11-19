@@ -31,7 +31,7 @@ func ReadConfigFile(filename string, cfg *Config) error {
 }
 
 func WriteConfigFile(filename string, cfg *Config) error {
-	buf, err := json.MarshalIndent(cfg, "", "")
+	buf, err := json.MarshalIndent(cfg, "", "  ")
 	if err != nil {
 		return err
 	}
