@@ -1,3 +1,4 @@
+syntax = "proto2";
 package merkledag ;
 
 //import "code.google.com/p/gogoprotobuf/gogoproto/gogo.proto";
